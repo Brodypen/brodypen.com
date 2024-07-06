@@ -8,13 +8,16 @@ import {
   IconFileBroken,
   IconSignature,
   IconTableColumn,
+  IconHeart,
+  IconPaw,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import AboutMe from "./bentoBoxes/AboutMe";
 
 export function BentoGridComponent() {
   return (
-    <BentoGrid className="max-w-7xl mx-auto auto-rows-max">
+    <BentoGrid className="max-w-7xl mx-auto py-8 px-4 auto-rows-max">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
@@ -29,63 +32,66 @@ export function BentoGridComponent() {
   );
 }
 const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
+  <div className="flex flex-1 w-full h-full min-h-[3rem] rounded-xl dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
 );
 
-const SkeletonOne = () => {
-  const variants = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: 10,
-      rotate: 5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-  const variantsSecond = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: -10,
-      rotate: -5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
+const CallOut = () => {
+  // const variants = {
+  //   initial: {
+  //     x: 0,
+  //   },
+  //   animate: {
+  //     x: 10,
+  //     rotate: 5,
+  //     transition: {
+  //       duration: 0.2,
+  //     },
+  //   },
+  // };
+  // const variantsSecond = {
+  //   initial: {
+  //     x: 0,
+  //   },
+  //   animate: {
+  //     x: -10,
+  //     rotate: -5,
+  //     transition: {
+  //       duration: 0.2,
+  //     },
+  //   },
+  // };
 
   return (
-    <motion.div
-      initial="initial"
-      whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
-    >
-      <motion.div
-        variants={variants}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-white dark:bg-black"
-      >
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-        <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
-      </motion.div>
-      <motion.div
-        variants={variantsSecond}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
-      >
-        <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-      </motion.div>
-      <motion.div
-        variants={variants}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 bg-white dark:bg-black"
-      >
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-        <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
-      </motion.div>
-    </motion.div>
+    <div>
+      Hi
+    </div>
+    // <motion.div
+    //   initial="initial"
+    //   whileHover="animate"
+    //   className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
+    // >
+    //   <motion.div
+    //     variants={variants}
+    //     className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-white dark:bg-black"
+    //   >
+    //     <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
+    //     <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
+    //   </motion.div>
+    //   <motion.div
+    //     variants={variantsSecond}
+    //     className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
+    //   >
+    //     <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
+    //     <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
+    //   </motion.div>
+    //   <motion.div
+    //     variants={variants}
+    //     className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 bg-white dark:bg-black"
+    //   >
+    //     <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
+    //     <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
+    //   </motion.div>
+    // </motion.div>
   );
 };
 const SkeletonTwo = () => {
@@ -239,6 +245,20 @@ const SkeletonFour = () => {
     </motion.div>
   );
 };
+const MadeWithLove = () => {
+  return (
+    <div>
+      <p className="line-clamp-1">
+        Made with{" "}
+
+          <IconHeart className="h-4 w-4 text-neutral-500 inline-block"/>{" "}
+          and Coffee
+
+      </p>
+      by Brody Pen
+    </div>
+  );
+}
 const SkeletonFive = () => {
   const variants = {
     initial: {
@@ -266,59 +286,55 @@ const SkeletonFive = () => {
   };
 
   return (
-    <motion.div
-      initial="initial"
-      whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
-    >
-      <motion.div
-        variants={variants}
-        className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-white dark:bg-black"
-      >
-        <Image
-          src=""
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="text-xs text-neutral-500">
-          There are a lot of cool framerworks out there like React, Angular,
-          Vue, Svelte that can make your life ....
-        </p>
-      </motion.div>
-      <motion.div
-        variants={variantsSecond}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
-      >
-        <p className="text-xs text-neutral-500">Use PHP.</p>
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-      </motion.div>
-    </motion.div>
+    <div>
+      <h1> Hi</h1>
+    </div>
+    // <motion.div
+    //   initial="initial"
+    //   whileHover="animate"
+    //   className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
+    // >
+    //   <motion.div
+    //     variants={variants}
+    //     className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-white dark:bg-black"
+    //   >
+    //     <Image
+    //       src=""
+    //       alt="avatar"
+    //       height="100"
+    //       width="100"
+    //       className="rounded-full h-10 w-10"
+    //     />
+    //     <p className="text-xs text-neutral-500">
+    //       There are a lot of cool framerworks out there like React, Angular,
+    //       Vue, Svelte that can make your life ....
+    //     </p>
+    //   </motion.div>
+    //   <motion.div
+    //     variants={variantsSecond}
+    //     className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
+    //   >
+    //     <p className="text-xs text-neutral-500">Use PHP.</p>
+    //     <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
+    //   </motion.div>
+    // </motion.div>
   );
 };
 const items = [
   {
-    title: "AI Content Generation",
+    title: "About me",
     description: (
       <span className="text-sm">
         Experience the power of AI in generating unique content.
       </span>
     ),
-    header: <SkeletonOne />,
-    className: "md:col-span-1",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    header: <CallOut />,
+    className: "md:col-span-3 md:row-span-3",
   },
   {
-    title: "Automated Proofreading",
-    description: (
-      <span className="text-sm">
-        Let AI handle the proofreading of your documents.
-      </span>
-    ),
-    header: <SkeletonTwo />,
-    className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    header: <AboutMe />,
+    className: "md:col-span-1 md:row-span-5",
+    icon: <IconPaw className="h-6 w-6 text-neutral-500" />,
   },
   {
     title: "Contextual Suggestions",
@@ -328,7 +344,7 @@ const items = [
       </span>
     ),
     header: <SkeletonThree />,
-    className: "md:col-span-1",
+    className: "md:col-span-1 md:row-span-4",
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
@@ -339,7 +355,7 @@ const items = [
       </span>
     ),
     header: <SkeletonFour />,
-    className: "md:col-span-2",
+    className: "md:col-span-2 md:row-span-2",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
 
@@ -351,7 +367,33 @@ const items = [
       </span>
     ),
     header: <SkeletonFive />,
-    className: "md:col-span-1",
+    className: "md:col-span-1 md:row-span-2",
     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Text Summarization",
+    description: (
+      <span className="text-sm">
+        Summarize your lengthy documents with AI technology.
+      </span>
+    ),
+    header: <SkeletonFive />,
+    className: "md:col-span-1 md:row-span-1",
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Text Summarization",
+    description: (
+      <span className="text-sm">
+        Summarize your lengthy documents with AI technology.
+      </span>
+    ),
+    header: <SkeletonFive />,
+    className: "md:col-span-1 md:row-span-2",
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    header: <MadeWithLove />,
+    className: "md:col-span-1 md:row-span-1",
   },
 ];
