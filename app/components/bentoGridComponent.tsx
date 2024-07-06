@@ -15,7 +15,10 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import AboutMe from "./bentoBoxes/AboutMe";
 import { AnimatedPinDemo } from "./bentoBoxes/Resume";
-
+import MadeWithLove from "./bentoBoxes/MadeWithLove";
+import Hero from "./bentoBoxes/Hero";
+import MarqueeDemo from "./bentoBoxes/MarqueeBox";
+import ContactCard from "./bentoBoxes/ContactCard";
 export function BentoGridComponent() {
   return (
     <BentoGrid className="max-w-7xl mx-auto py-8 px-4 auto-rows-max">
@@ -26,9 +29,14 @@ export function BentoGridComponent() {
           description={item.description}
           header={item.header}
           className={
-            i !== 2
-              ? cn("p-4", item.className)
-              : cn("dark:hover:bg-black/0 dark:hover:border-none", item.className)
+            i === 2
+              ? cn(
+                  "dark:hover:bg-black/0 dark:hover:border-none",
+                  item.className
+                )
+              : i === 3
+              ? item.className
+              : cn("p-4", item.className)
           }
           icon={item.icon}
         />
@@ -248,18 +256,6 @@ const SkeletonFour = () => {
     </motion.div>
   );
 };
-const MadeWithLove = () => {
-  return (
-    <div>
-      <p className="line-clamp-1">
-        Made with{" "}
-        <IconHeart className="h-4 w-4 text-neutral-500 inline-block" /> and
-        Coffee
-      </p>
-      by Brody Pen
-    </div>
-  );
-};
 const SkeletonFive = () => {
   const variants = {
     initial: {
@@ -323,13 +319,7 @@ const SkeletonFive = () => {
 };
 const items = [
   {
-    title: "About me",
-    description: (
-      <span className="text-sm">
-        Experience the power of AI in generating unique content.
-      </span>
-    ),
-    header: <CallOut />,
+    header: <Hero />,
     className: "md:col-span-3 md:row-span-3",
   },
   {
@@ -343,15 +333,8 @@ const items = [
     // icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Sentiment Analysis",
-    description: (
-      <span className="text-sm">
-        Understand the sentiment of your text with AI analysis.
-      </span>
-    ),
-    header: <SkeletonFour />,
+    header: <MarqueeDemo />,
     className: "md:col-span-2 md:row-span-2",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
 
   {
@@ -383,7 +366,7 @@ const items = [
         Summarize your lengthy documents with AI technology.
       </span>
     ),
-    header: <SkeletonFive />,
+    header: <ContactCard />,
     className: "md:col-span-1 md:row-span-2",
     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
   },

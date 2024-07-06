@@ -2,6 +2,7 @@
 import React from "react";
 import { BackgroundBeams } from "@/ui/background-beams";
 import { BentoGridComponent } from "./components/bentoGridComponent";
+import MarqueeDemo from "./components/bentoBoxes/MarqueeBox";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <div className="max-h-full max-w-7xl md:max-w-5xl selection:mx-auto z-50">
         <BentoGridComponent/>
       </div>
+      <MarqueeDemo />
       <BackgroundBeams />
     </div>
   );
