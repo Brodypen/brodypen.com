@@ -20,7 +20,7 @@ import Hero from "./bentoBoxes/Hero";
 import MarqueeDemo from "./bentoBoxes/MarqueeBox";
 import ContactCard from "./bentoBoxes/ContactCard";
 import QuoteBox from "./bentoBoxes/QuoteBox";
-import SocialBoxes from "./bentoBoxes/SocialBoxes";
+import { SocialBoxes } from "./bentoBoxes/SocialBoxes";
 export function BentoGridComponent() {
   return (
     <BentoGrid className="max-w-7xl mx-auto py-8 px-4 auto-rows-max">
@@ -36,9 +36,7 @@ export function BentoGridComponent() {
                   "dark:hover:bg-black/0 dark:hover:border-none pb-2",
                   item.className
                 )
-              : i === 0 || i === 3 || i == 6
-              ? item.className
-              : cn("p-4", item.className)
+              : item.className
           }
           icon={item.icon}
         />
@@ -84,13 +82,13 @@ const items = [
   // },
   {
     header: <SocialBoxes />,
-    className: "md:col-span-1 md:row-span-1",
+    className: "md:col-span-2 md:row-span-2",
   },
-  {
-    header: <ContactCard />,
-    className: "md:col-span-1 md:row-span-2",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-  },
+  // {
+  //   header: <ContactCard />,
+  //   className: "md:col-span-1 md:row-span-2",
+  //   icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+  // },
   {
     header: <MadeWithLove />,
     className: "md:col-span-1 md:row-span-1",

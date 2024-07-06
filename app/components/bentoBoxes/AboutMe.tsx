@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutMe = () => {
   return (
-    <div className="flex flex-col text-sm gap-2">
+    <div className="flex flex-col text-sm gap-2 p-4">
       <p>About Me:</p>
       <p className="opacity-75">Software Engineer</p>
 
