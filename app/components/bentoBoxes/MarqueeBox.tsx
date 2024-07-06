@@ -1,6 +1,18 @@
 import { cn } from "@/lib/utils";
 import Marquee from "@/ui/Marquee";
 
+// bg-red-500
+const experiences = [
+  {
+    name: "JPMorganChase",
+    username: "SWE Summer Intern 2025",
+    body: "Worked and did things. it was great to do this work.",
+    img: "https://avatar.vercel.sh/jack",
+  },
+];
+// bg-blue-500
+const projects = [{}];
+// bg-purple-500
 const reviews = [
   {
     name: "Ashish Job",
@@ -41,10 +53,9 @@ const reviews = [
 ];
 
 // const firstRow = reviews.slice(0, reviews.length / 2);
-// const secondRow = reviews.slice(reviews.length / 2);
-const firstRow = reviews;
-
-const ReviewCard = ({
+const secondRow = reviews.slice(reviews.length / 2);
+const firstRow = experiences;
+const ExperienceCard = ({
   img,
   name,
   username,
@@ -79,6 +90,41 @@ const ReviewCard = ({
   );
 };
 
+const ReviewCard = ({
+  img,
+  name,
+  username,
+  body,
+}: {
+  img: string;
+  name: string;
+  username: string;
+  body: string;
+}) => {
+  return (
+    <figure
+      className={cn(
+        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        // light styles
+        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        // dark styles
+        "dark:border-gray-50/[.1] dark:bg-red-500/[.25] dark:hover:bg-gray-50/[.15]"
+      )}
+    >
+      <div className="flex flex-row items-center gap-2">
+        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <div className="flex flex-col">
+          <figcaption className="text-sm font-medium dark:text-white">
+            {name}
+          </figcaption>
+          <p className="text-xs font-medium dark:text-white/40">{username}</p>
+        </div>
+      </div>
+      <blockquote className="mt-2 text-sm">{body}</blockquote>
+    </figure>
+  );
+};
+
 const MarqueeDemo = () => {
   return (
     <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
@@ -87,11 +133,11 @@ const MarqueeDemo = () => {
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      {/* <Marquee reverse pauseOnHover className="[--duration:20s]">
+      <Marquee reverse pauseOnHover className="[--duration:20s]">
         {secondRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
-      </Marquee> */}
+      </Marquee>
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black/50 dark:from-background"></div>
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black/50 dark:from-background"></div>
     </div>
