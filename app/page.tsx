@@ -10,7 +10,6 @@ export default function Home() {
       <div className="max-h-full max-w-7xl md:max-w-5xl selection:mx-auto z-50">
         <BentoGridComponent/>
       </div>
-      <MarqueeDemo />
       <BackgroundBeams />
     </div>
   );

@@ -11,11 +11,11 @@ const Hero = () => {
         isStatic
         className="font-bold z-[1000]"
       >
-        <span className="z-60 whitespace-pre-wrap  text-center text-7xl font-bold leading-none tracking-tighter">
+        <span className="z-60 whitespace-pre-wrap text-center text-7xl font-bold leading-none tracking-tighter px-8 flex">
           <span className="bg-gradient-to-b bg-clip-text">
-            👋 I&#39;m Brody{" "}
+            👋{" "}
             <span className="bg-gradient-to-b from-red-300 via-purple-300 to-blue-700 bg-clip-text text-transparent">
-              !
+              I&#39;m Brody!
             </span>
           </span>
         </span>
