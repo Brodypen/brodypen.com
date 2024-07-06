@@ -14,6 +14,7 @@ import {
 import { motion } from "framer-motion";
 import Image from "next/image";
 import AboutMe from "./bentoBoxes/AboutMe";
+import { AnimatedPinDemo } from "./bentoBoxes/Resume";
 
 export function BentoGridComponent() {
   return (
@@ -24,7 +25,11 @@ export function BentoGridComponent() {
           title={item.title}
           description={item.description}
           header={item.header}
-          className={cn("[&>p:text-lg]", item.className)}
+          className={
+            i !== 2
+              ? cn("p-4", item.className)
+              : cn("dark:hover:bg-black/0 dark:hover:border-none", item.className)
+          }
           icon={item.icon}
         />
       ))}
@@ -62,9 +67,7 @@ const CallOut = () => {
   // };
 
   return (
-    <div>
-      Hi
-    </div>
+    <div>Hi</div>
     // <motion.div
     //   initial="initial"
     //   whileHover="animate"
@@ -250,15 +253,13 @@ const MadeWithLove = () => {
     <div>
       <p className="line-clamp-1">
         Made with{" "}
-
-          <IconHeart className="h-4 w-4 text-neutral-500 inline-block"/>{" "}
-          and Coffee
-
+        <IconHeart className="h-4 w-4 text-neutral-500 inline-block" /> and
+        Coffee
       </p>
       by Brody Pen
     </div>
   );
-}
+};
 const SkeletonFive = () => {
   const variants = {
     initial: {
@@ -337,15 +338,9 @@ const items = [
     icon: <IconPaw className="h-6 w-6 text-neutral-500" />,
   },
   {
-    title: "Contextual Suggestions",
-    description: (
-      <span className="text-sm">
-        Get AI-powered suggestions based on your writing context.
-      </span>
-    ),
-    header: <SkeletonThree />,
+    header: <AnimatedPinDemo />,
     className: "md:col-span-1 md:row-span-4",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    // icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "Sentiment Analysis",
