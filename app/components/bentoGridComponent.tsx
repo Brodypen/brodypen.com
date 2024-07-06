@@ -31,10 +31,10 @@ export function BentoGridComponent() {
           className={
             i === 2
               ? cn(
-                  "dark:hover:bg-black/0 dark:hover:border-none",
+                  "dark:hover:bg-black/0 dark:hover:border-none pb-2",
                   item.className
                 )
-              : i === 3
+              : i === 0 || i === 3
               ? item.className
               : cn("p-4", item.className)
           }
