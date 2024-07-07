@@ -27,8 +27,6 @@ export function BentoGridComponent() {
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
-          title={item.title}
-          description={item.description}
           header={item.header}
           className={
             i === 2
