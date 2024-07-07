@@ -11,7 +11,6 @@ export interface DockProps extends VariantProps<typeof dockVariants> {
   magnification?: number;
   distance?: number;
   children: React.ReactNode;
-
 }
 
 const DEFAULT_MAGNIFICATION = 60;
@@ -69,6 +68,7 @@ export interface DockIconProps {
   children?: React.ReactNode;
   props?: PropsWithChildren;
   href: string;
+  ariaLabel: string;
 }
 
 const DockIcon = ({
@@ -79,6 +79,7 @@ const DockIcon = ({
   className,
   children,
   href,
+  ariaLabel,
   ...props
 }: DockIconProps) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -102,7 +103,7 @@ const DockIcon = ({
   });
 
   return (
-    <Link href={href} target="_blank" className="z-50">
+    <Link href={href} aria-label={ariaLabel} target="_blank" className="z-50">
       <motion.div
         ref={ref}
         style={{ width }}

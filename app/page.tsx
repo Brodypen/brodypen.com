@@ -2,7 +2,6 @@
 import React from "react";
 import { BackgroundBeams } from "@/ui/background-beams";
 import { BentoGridComponent } from "./components/bentoGridComponent";
-import MarqueeDemo from "./components/bentoBoxes/MarqueeBox";
 
 export default function Home() {
   return (

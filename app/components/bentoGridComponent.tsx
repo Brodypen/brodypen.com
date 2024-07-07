@@ -1,25 +1,14 @@
 "use client";
 import { cn } from "@/lib/utils";
-import React from "react";
-import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import {
-  IconBoxAlignRightFilled,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-  IconHeart,
-  IconPaw,
+  IconPaw
 } from "@tabler/icons-react";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import AboutMe from "./bentoBoxes/AboutMe";
-import { AnimatedPinDemo } from "./bentoBoxes/Resume";
-import MadeWithLove from "./bentoBoxes/MadeWithLove";
 import Hero from "./bentoBoxes/Hero";
+import MadeWithLove from "./bentoBoxes/MadeWithLove";
 import MarqueeDemo from "./bentoBoxes/MarqueeBox";
-import ContactCard from "./bentoBoxes/ContactCard";
-import QuoteBox from "./bentoBoxes/QuoteBox";
+import { AnimatedPinDemo } from "./bentoBoxes/Resume";
 import { SocialBoxes } from "./bentoBoxes/SocialBoxes";
 export function BentoGridComponent() {
   return (

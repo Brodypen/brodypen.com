@@ -8,6 +8,8 @@ const Hero = () => {
       <LinkPreview
         url="https://www.linkedin.com/in/brodypen/"
         imageSrc="/Brody_Pen_Headshot.png"
+        height={200}
+        width={200}
         isStatic
         className="font-bold z-[1000]"
       >
