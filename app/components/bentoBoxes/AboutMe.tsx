@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const AboutMe = () => {
   return (
@@ -8,25 +8,26 @@ const AboutMe = () => {
 
       <section>
         <p>
-          Originally a software engineer that later developed a strong creative
-          side. I&apos;ve worked professionally in the web and video game
-          industry for over 10 years, utilizing advanced 3D and motion graphics
-          to deliver magical experiences to millions of people. I find myself
-          positioned between product, design, and engineering; leading the
-          development of cutting-edge projects.
+          I am a software engineer and a current student at the University of
+          Houston, with a strong passion for web development, which I have
+          pursued through various open-source projects. My journey as a
+          first-generation immigrant has instilled in me a robust work ethic and
+          a relentless drive to succeed. This unique background has shaped my
+          determination and resilience, enabling me to overcome challenges and
+          thrive in both my academic and professional endeavors.
         </p>
       </section>
 
-      <section>
+      {/* <section>
         <ul>
           <li className="flex items-center gap-2">
             <span>🍩</span>
             Making the best donuts!
           </li>
         </ul>
-      </section>
+      </section> */}
 
-      <section>
+      {/* <section>
         <p>Outside of tech...</p>
         <ul>
           <li className="flex items-center gap-2">
@@ -34,9 +35,9 @@ const AboutMe = () => {
             Making the best donuts!
           </li>
         </ul>
-      </section>
+      </section>*/}
     </div>
   );
-}
+};
 
-export default AboutMe
+export default AboutMe;
