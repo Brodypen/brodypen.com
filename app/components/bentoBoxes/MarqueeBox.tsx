@@ -107,7 +107,7 @@ const ReviewCard = ({
   body: string;
   className?: string;
 }) => {
-  console.log(className);
+  // console.log(className);
   return (
     <figure
       className={cn(
