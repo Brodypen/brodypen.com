@@ -12,7 +12,7 @@ import Link from "next/link";
 export function SocialBoxes() {
   return (
     <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg">
-      <span className="pointer-events-none absolute whitespace-pre-wrap opacity-75 bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-9xl font-semibold leading-none text-transparent dark:from-amber-500 dark:to-pink-500">
+      <span className="pointer-events-none absolute whitespace-pre-wrap opacity-75 bg-gradient-to-b bg-clip-text text-center text-9xl font-semibold leading-none text-transparent from-amber-500 to-pink-500">
         Socials
       </span>
       <Dock>
