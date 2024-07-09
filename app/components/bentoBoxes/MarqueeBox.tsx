@@ -9,21 +9,21 @@ const experiences = [
     username: "SWE Summer Intern 2024",
     body: "Developed solutions to support financial services and operations. ",
     img: "/marqueeAssets/JPMorganChase.jpeg",
-    className: "dark:bg-orange-500/[.25]",
+    className: "bg-orange-500/[.25]",
   },
   {
     name: "CougarCS",
     username: "Web Master",
     body: "Led web projects development at the biggest CS org in UH",
     img: "/marqueeAssets/cougarCS_WebDev.jpeg",
-    className: "dark:bg-pink-500/[.25]",
+    className: "bg-pink-500/[.25]",
   },
   {
     name: "University of Houston",
     username: "ConocoPhilips Center Tutor",
     body: "Improved CS Students academic performance.",
     img: "/marqueeAssets/UHNSM_Tutor.jpeg",
-    className: "dark:bg-rose-500/[.25]",
+    className: "bg-rose-500/[.25]",
   },
 ];
 // bg-blue-500
@@ -41,7 +41,7 @@ const reviews = [
     username: "UX Design Intern @ PwC",
     body: "I always trust Brody to turn my designs into something amazing!",
     img: "/marqueeAssets/JorellP.jpeg",
-    className: "dark:bg-purple-500/[.25]",
+    className: "bg-purple-500/[.25]",
   },
   // {
   //   name: "John",
@@ -113,9 +113,9 @@ const ReviewCard = ({
       className={cn(
         "relative w-64 h-28 cursor-pointer overflow-hidden rounded-xl border p-4",
         // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        // "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
-        "dark:border-gray-50/[.1] dark:bg-red-500/[.25] dark:hover:bg-gray-50/[.05]",
+        "border-gray-50/[.1] bg-red-500/[.25] hover:bg-gray-50/[.05]",
         className
       )}
     >
@@ -128,10 +128,10 @@ const ReviewCard = ({
           src={img}
         />
         <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
+          <figcaption className="text-sm font-medium text-white">
             {name}
           </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
+          <p className="text-xs font-medium text-white/40">{username}</p>
         </div>
       </div>
       <blockquote className="mt-2 text-sm line-clamp-2">{body}</blockquote>
@@ -152,8 +152,8 @@ const MarqueeDemo = () => {
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black/50 dark:from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black/50 dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black/50 from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black/50 from-background"></div>
     </div>
   );
 };

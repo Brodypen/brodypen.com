@@ -20,7 +20,7 @@ export function BentoGridComponent() {
           className={
             i === 2
               ? cn(
-                  "dark:hover:bg-black/0 dark:hover:border-none pb-2",
+                  "hover:bg-black/0 hover:border-none pb-2",
                   item.className
                 )
               : item.className
