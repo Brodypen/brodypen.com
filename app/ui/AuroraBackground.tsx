@@ -17,7 +17,7 @@ export const AuroraBackground = ({
     <main>
       <div
         className={cn(
-          "relative flex flex-col h-full min-h-[12rem] md:h-[12rem] items-center justify-center bg-zinc-50 dark:bg-slate-900  text-slate-950 transition-bg",
+          "relative flex flex-col h-full min-h-[12rem] md:h-[12rem] items-center justify-center bg-slate-900  text-slate-950 transition-bg",
           className
         )}
         {...props}
@@ -27,7 +27,7 @@ export const AuroraBackground = ({
             //   I'm sorry but this is what peak developer performance looks like // trigger warning
             className={cn(
               `
-            [--white-gradient:repeating-linear-gradient(100deg,var(--white)_0%,var(--white)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--white)_16%)]
+            [--white-gradient:repeating-linear-gradient(100deg,var(--black)_0%,var(--pink-500)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--pink-500)_16%)]
             [--dark-gradient:repeating-linear-gradient(100deg,var(--black)_0%,var(--pink-500)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--pink-500)_16%)]
             [--aurora:repeating-linear-gradient(100deg,var(--rose-500)_40%,var(--pink-500)_15%,var(--purple-500)_20%,var(--violet-500)_25%,var(--blue-500)_30%)]
             [background-image:var(--white-gradient),var(--aurora)]
