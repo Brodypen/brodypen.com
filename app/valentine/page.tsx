@@ -222,7 +222,13 @@ export default function ValentinePage() {
           if (item.type === "img") {
             return (
               <div key={index} className="absolute float-animation scrapbook-image" style={style}>
-                <Image src={item.src} alt={item.alt} layout="fill" objectFit="cover" className="rounded-lg shadow-lg" />
+                <Image
+                  src={item.src ?? ""} // Provides a fallback string
+                  alt={item.alt ?? "Scrapbook image"}
+                  fill // 'layout="fill"' is deprecated in newer Next.js versions; use 'fill'
+                  style={{ objectFit: "cover" }} // 'objectFit' moved to style prop in newer versions
+                  className="rounded-lg shadow-lg"
+                />
               </div>
             );
           }
