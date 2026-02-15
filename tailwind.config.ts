@@ -10,6 +10,10 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        caveat: ["Caveat", "cursive"],
+        "patrick-hand": ["Patrick Hand", "cursive"],
+      },
       animation: {
         marquee: "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
